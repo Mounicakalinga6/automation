@@ -1,0 +1,65 @@
+1 Function Declaration	Standard reusable functions	Login, setup, utils
+2️⃣	Arrow Function (=>)	Short, clean, no this, used in utility/helper logic	map, filter, test helpers
+3️⃣	Async Function	Needed for await in Playwright	Every Playwright test step
+4️⃣	Function Expression	Functions stored in variables, reusable	Reusable test logic
+5️⃣	Callback Function	Passed to array methods like forEach, map	Handling lists, table rows
+
+
+
+
+1. Function Declaration
+A traditional way of defining a function using the function keyword.
+
+j
+function login(page) {
+  // reusable login function
+  return page.goto('/login');
+}
+Hoisted (can be used before declared)
+
+
+
+
+
+
+
+Function Expression
+A function assigned to a variable (can be anonymous or named).
+
+
+const logout = function(page) {
+  return page.click('#logout');
+};
+⛔ Not Hoisted
+
+
+
+Arrow Function (=>)
+Introduced in ES6. Shorter syntax, no own this.
+
+const generateRandom = () => Math.random().toString(36).slice(2, 8);
+
+
+
+
+function runTest(callback) {
+  console.log("Running test...");
+  callback(); // runs whatever you pass
+}
+
+runTest(() => {
+  console.log("Test logic here");
+});
+
+
+
+
+
+Used when working with await and promises — MUST in Playwright.
+
+
+async function fillForm(page) {
+  await page.fill('#email', 'test@test.com');
+  await page.click('text=Submit');
+}
+✅ Use await inside these.

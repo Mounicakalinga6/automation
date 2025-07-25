@@ -1,0 +1,49 @@
+. Creating an Object with Key-Value Pairs
+js
+Copy
+Edit
+const person = {
+  name: "Alice",
+  age: 30,
+  isStudent: false
+};
+Keys: name, age, isStudent
+
+Values: "Alice", 30, false
+
+🔹 2. Accessing Values
+Dot Notation:
+js
+Copy
+Edit
+console.log(person.name);    // "Alice"
+console.log(person.age);     // 30
+Bracket Notation:
+js
+Copy
+Edit
+console.log(person["name"]); // "Alice"
+✅ Use bracket notation when:
+
+The key is dynamic (from a variable)
+
+The key has spaces or special characters
+
+🔹 3. Updating Values
+js
+Copy
+Edit
+person.age = 31;               // Dot
+person["isStudent"] = true;    // Bracket
+🔹 4. Adding New Key-Value Pairs
+js
+Copy
+Edit
+person.city = "New York";         // Dot
+person["country"] = "USA";        // Bracket
+🔹 5. Deleting a Property
+js
+Copy
+Edit
+delete person.age;          // Dot
+delete person["isStudent"]; // Bracket
