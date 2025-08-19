@@ -284,7 +284,6 @@ test('Login to Phenom and Select Tenant', async () => {
   await browser.close();
 }, 60000);
 
-dcdhcgd
 
 
 
@@ -301,3 +300,8 @@ dcdhcgd
 // Integrated automated test suites into CI/CD Pipeline to enable faster and more reliable software releases.
 // Experience in defect log using defect management tools such as Bugnizer and prepared daily test status reports
 // to communicate the test status with the team.
+
+
+
+
+
